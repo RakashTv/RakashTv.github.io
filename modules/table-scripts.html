@@ -1,0 +1,26 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.fancytable/dist/fancyTable.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#tableID").fancyTable({
+            inputPlaceholder: "Szukaj...",
+            inputStyle: "width: 100%; padding: 20px;margin: 0;margin-bottom: 20px; border: #ADB5BD 1px solid;border-radius: 2em;",
+            sortColumn:0,
+            /* Setting pagination or enabling */
+            pagination: true,
+            paginationClass: 'page-btn',
+            paginationClassActive: 'page-btn-active',
+            paginationElement: "#pagination-section",
+            perPage: 10,
+
+            globalSearch:true,
+            /* Exclude 6th column from global search.*/
+            globalSearchExcludeColumns: [6],
+
+            onInit:()=>{
+                $(".fancySearchRow").detach().prependTo("thead");
+                $(".fancySearchRow").css("background-color", "#fff");
+            }
+        });
+    });
+</script>

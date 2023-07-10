@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: #343A40;
+}
+
+body{
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/*top part*/
+header{
+    width: 100%;
+    height: 8vh;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 25px;
+    font-size: 18px;
+}
+
+header img{
+    height: 5.5vh;
+    margin-right: 25px;
+}
+
+header p{
+    font-size: 26px;
+}
+
+/*Back button*/
+header section{
+    top: 0;
+    left: 10px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8vh;
+    cursor: pointer;
+}
+
+/*End of top part*/
+
+/*Main view*/
+main{
+    width: 100%;
+    min-height: 92vh;
+    padding: 50px;
+}
+
+/*title of a page*/
+main > p{
+    margin-top: 0;
+    font-weight: 500;
+    font-size: 2em;
+    color: #495057;
+
+}
+
+/*basic info like profile photo, name, status, date of birth etc.*/
+.basic-info{
+    width: 100%;
+    min-height: 25vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    border-radius: 2em;
+}
+
+/*profile picture*/
+.basic-info img{
+    width: calc(20vh - 20px);
+    height: calc(20vh - 20px);
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 40px;
+}
+
+/*name and status*/
+.basic-info .no-specifics{
+    flex: 1;
+}
+
+.basic-info .no-specifics h2{
+    font-size: 1.75em;
+    margin: 0;
+}
+
+.basic-info .no-specifics p{
+    margin: 5px 0;
+    color: #495057;
+}
+/*End of name and status*/
+
+/*more info about citizen*/
+.basic-info .specifics{
+    border-left: #495057 2px dashed;
+    padding: 5px;
+    flex: 2;
+    height: calc(20vh - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.basic-info .specifics .row{
+    display: flex;
+    margin: 5px 0 0 20px;
+}
+
+.basic-info .specifics .row .index{
+    font-weight: 500;
+    margin: 0 5px 0 0;
+}
+
+.basic-info .specifics .row .data{
+    margin: 0;
+    color: #495057;
+}
+/*End of more info about citizen*/
+
+/*status tags*/
+.no-insurance-info{
+    border: none;
+    font-weight: 500;
+    border-radius: 1em;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px 0;
+}
+
+.licence-info{
+    border: none;
+    font-weight: 500;
+    border-radius: 1em;
+    background-color: #ADB5BD;
+    color: #000000;
+    padding: 5px 10px;
+    margin: 5px 0;
+    transition: all 0.1s ease-in;
+}
+
+.licence-info:hover{
+    background-color: #CED4DA;
+}
+/*end of status tags*/
+/*End of basic info like profile photo, name, status, date of birth etc.*/
+
+
+/*Note form*/
+.note-form{
+    margin-top: 40px;
+    width: 100%;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    border-radius: 2em;
+}
+
+/*input*/
+.note-form form input[type=text]{
+    width: 84%;
+    padding: 20px;
+    margin: 0;
+    border: #ADB5BD 1px solid;
+    border-radius: 2em;
+}
+
+/*Submit button*/
+.note-form form button[type=submit]{
+    margin: 0;
+    padding: 20px;
+    width: 15%;
+    border: none;
+    border-radius: 2em;
+    background-color: #E9ECEF;
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+}
+
+.note-form form button[type=submit]:hover{
+    background-color: #DEE2E6;
+}
+/*End of submit button*/
+/*End of note form*/
+
+/*More info, like notes -> mostly notes*/
+.more-info{
+    margin-top: 40px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    border-radius: 2em;
+}
+
+/*Links to multiple tabs*/
+.more-info .tabs{
+    width: 100%;
+    border-bottom: #ADB5BD 1px solid;
+    overflow: hidden;
+}
+
+.more-info .tabs button{
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.more-info .tabs button:hover{
+    border-bottom: lightblue 4px solid;
+}
+
+.more-info .tabs .active{
+    border-bottom: lightblue 4px solid;
+}
+/*end of links to multiple tabs*/
+
+/*Content of tabs*/
+.more-info .tab-content{
+    display: none;
+    width: 100%;
+}
+
+.tab-content ul {
+    padding: 1em 0 0 2em;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+.tab-content ul::before {
+    content: " ";
+    height: 100%;
+    width: 1px;
+    background-color: #ADB5BD;
+    position: absolute;
+    top: 0;
+    left: 2.5em;
+    z-index: -1;
+}
+
+.tab-content li div {
+    display: inline-block;
+    margin: 1em 0;
+    vertical-align: top;
+}
+
+.tab-content .bullet {
+    width: 1em;
+    height: 1em;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 1;
+    margin-right: 1em;
+    border: 2px solid #B0E8E2;
+}
+
+.tab-content .time {
+    width: 20%;
+    font-size: 0.75em;
+    padding-top: 0.25em;
+}
+
+.tab-content .desc {
+    width: 50%;
+}
+/*end of content of tabs*/
+/*info about vehicle*/
+.car-info{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.car-info .row{
+    display: flex;
+    margin: 5px 0 0 20px;
+}
+
+.car-info .row .index{
+    font-weight: 500;
+    margin: 0 5px 0 0;
+}
+
+.car-info .row .data{
+    margin: 0;
+    color: #495057;
+}
+/*end of more info, like notes*/
